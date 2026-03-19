@@ -1,11 +1,7 @@
-import Hero from "./components/Hero"
+import Comprar from "./pages/Comprar"
 
 function App() {
-  return (
-    <div>
-      <Hero />
-    </div>
-  )
+  return <Comprar />
 }
 
 export default App
