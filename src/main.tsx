@@ -1,10 +1,16 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.tsx'
+import React from "react"
+import ReactDOM from "react-dom/client"
+import App from "./App"
+import Comprar from "./pages/Comprar"
+import "./index.css"
+import "./styles.css"
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+const path = window.location.pathname
+
+const Component = path === "/comprar" ? Comprar : App
+
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <Component />
+  </React.StrictMode>
 )
